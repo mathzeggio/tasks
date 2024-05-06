@@ -1,18 +1,21 @@
 package com.book.task.entity;
-import jakarta.persistence.*;
-import jakarta.persistence.Id;
+
 import lombok.Data;
+
+import jakarta.persistence.*;
 
 @Entity
 @Data
 public class Task {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
 
-    @Column(nullable = false)
+    @Column
     private String name;
 
-    @Column(nullable = false)
+    @Column
     private String description;
+
 }
